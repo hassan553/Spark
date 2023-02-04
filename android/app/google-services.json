@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "342982420301",
+    "project_id": "rakna-eed85",
+    "storage_bucket": "rakna-eed85.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342982420301:android:1f505e012a0724de057904",
+        "android_client_info": {
+          "package_name": "com.example.rakna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342982420301-61bo0p6tm24rni1r5rc1g8utegb2eadk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_pOL8dNEjPPuxm_WZQu33AzZzWav8R1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342982420301-61bo0p6tm24rni1r5rc1g8utegb2eadk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
