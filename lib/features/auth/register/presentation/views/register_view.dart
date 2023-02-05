@@ -16,6 +16,7 @@ import '../../../../../core/functions/globle_functions.dart';
 import '../../../../../core/resources/app_assets.dart';
 import '../../../../../core/resources/app_colors.dart';
 import '../../../../widgets/custom_text.dart';
+import '../../../car_info/views/car_info.dart';
 import '../../../login/presentation/widgets/build-rich_text.dart';
 import '../../../login/presentation/widgets/build-socail_widget.dart';
 import '../../../login/presentation/widgets/divider_widget.dart';
@@ -189,9 +190,10 @@ class _RegisterViewState extends State<RegisterView> {
                               width: screenSize(context).width,
                               child: CustomButton(
                                 function: () {
-                                  if (cubit.formKey.currentState!.validate()) {
-                                    navigateOff(context, const HomeView());
-                                  }
+                                  // if (cubit.formKey.currentState!.validate()) {
+                                  //   navigateOff(context, const HomeView());
+                                  // }
+                                  navigateOff(context, const CarInfoView());
                                 },
                                 text: 'Create account',
                               ),
