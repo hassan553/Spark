@@ -18,7 +18,7 @@ class DividerWidget extends StatelessWidget {
         CircleAvatar(
           radius: 30,
           backgroundColor: AppColors.offWhite,
-          child: const CustomTextWidget(
+          child:  CustomTextWidget(
             text: "OR",
             fontWeight: FontWeight.bold,
           ),

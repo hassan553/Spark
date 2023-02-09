@@ -7,7 +7,7 @@ import 'app/my_app.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //Firebase.initializeApp();
-  //setOrientations();
+  setOrientations();
   runApp(const Rakna());
 }
 

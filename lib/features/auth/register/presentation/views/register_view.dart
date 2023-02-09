@@ -9,7 +9,6 @@ import 'package:rakna/features/auth/login/view_model/login_cubit.dart';
 import 'package:rakna/features/onboarding/views/onboarding_view.dart';
 import 'package:rakna/features/widgets/custom_button.dart';
 import 'package:rakna/features/widgets/custom_text_field.dart';
-import 'package:rakna/home.dart';
 
 import '../../../../../core/functions/globle_functions.dart';
 

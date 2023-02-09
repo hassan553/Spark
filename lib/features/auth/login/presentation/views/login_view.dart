@@ -1,22 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:rakna/features/auth/forgetPassword/presentation/views/forget_view.dart';
 import 'package:rakna/features/auth/login/view_model/login_cubit.dart';
-import 'package:rakna/features/auth/register/presentation/views/register_view.dart';
-import 'package:rakna/features/onboarding/views/onboarding_view.dart';
 import 'package:rakna/features/widgets/custom_button.dart';
 import 'package:rakna/features/widgets/custom_text_field.dart';
-import 'package:rakna/home.dart';
 
 import '../../../../../core/functions/globle_functions.dart';
 
 import '../../../../../core/resources/app_assets.dart';
 import '../../../../../core/resources/app_colors.dart';
+import '../../../../home/views/home_view.dart';
 import '../../../../widgets/custom_text.dart';
 
 import '../widgets/build-rich_text.dart';
@@ -175,7 +170,7 @@ class _LoginViewState extends State<LoginView> {
                                   ),
                                   InkWell(
                                     onTap: () {
-                                      navigateTo(context, const RegisterView());
+                                      navigateTo(context, const HomeView());
                                     },
                                     child: CustomTextWidget(
                                       text: "Sign Up",

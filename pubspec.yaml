@@ -37,6 +37,7 @@ dependencies:
   firebase_core: ^1.19.1
   firebase_core_platform_interface: 4.5.1
   firebase_storage: ^10.3.1
+  floating_bottom_navigation_bar: ^1.5.2
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
@@ -70,6 +71,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/svg/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
