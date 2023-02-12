@@ -5,6 +5,7 @@ class CustomTextWidget extends StatelessWidget {
   final double fontSize;
   final FontWeight fontWeight;
   final Color color;
+
   int? maxLines;
   CustomTextWidget({
     super.key,
@@ -13,6 +14,7 @@ class CustomTextWidget extends StatelessWidget {
     this.fontWeight = FontWeight.normal,
     this.color = Colors.black,
     this.maxLines,
+ 
   });
 
   @override

@@ -10,7 +10,8 @@ import 'package:rakna/features/home/views/home_view.dart';
 
 import '../core/resources/app_colors.dart';
 import '../features/auth/login/view_model/login_cubit.dart';
-import '../features/onboarding/views/splash.dart';
+import 'package:device_preview/device_preview.dart';
+import '../features/onboarding/views/splash_one.dart';
 
 class Rakna extends StatelessWidget {
   const Rakna({super.key});
@@ -35,6 +36,8 @@ class Rakna extends StatelessWidget {
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
+          useInheritedMediaQuery: true,
+          builder: DevicePreview.appBuilder,
           theme: ThemeData(
             fontFamily: GoogleFonts.robotoMono().fontFamily,
             scaffoldBackgroundColor: AppColors.white,
@@ -52,7 +55,7 @@ class Rakna extends StatelessWidget {
               ),
             ),
           ),
-          home: const LoginView(),
+          home: const SplashOneView(),
         ),
       ),
     );

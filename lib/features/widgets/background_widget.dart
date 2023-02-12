@@ -23,6 +23,8 @@ class BackgroundWidget extends StatelessWidget {
         ),
       ),
       Container(
+        width: screenSize(context).width,
+        height: screenSize(context).height,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [

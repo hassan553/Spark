@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../model/onboarding_model.dart';
 
 import '../../../core/functions/globle_functions.dart';
@@ -54,7 +55,8 @@ class PageViewWidget extends StatelessWidget {
                     CustomTextWidget(
                       text: onboardingList[index].title,
                       fontSize: 25,
-                      color: AppColors.white,
+                      color: AppColors.black,
+                      fontWeight: FontWeight.bold,
                     ),
                     const SizedBox(
                       height: 3,
@@ -64,7 +66,8 @@ class PageViewWidget extends StatelessWidget {
                       child: CustomTextWidget(
                         text: onboardingList[index].subTitle,
                         fontSize: 16,
-                        color: AppColors.white,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.black,
                       ),
                     ),
                   ],

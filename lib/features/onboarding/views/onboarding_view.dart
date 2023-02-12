@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rakna/features/widgets/background_widget.dart';
 import '../../auth/login/presentation/views/login_view.dart';
 import '../model_view/onboarding_cubit.dart';
 import '../widgets/dots_widget.dart';
@@ -22,68 +23,48 @@ class OnBoardingView extends StatelessWidget {
           var cubit = OnboardingCubit.get(context);
           return Scaffold(
             body: SafeArea(
-              child: Stack(
-                children: [
-                  Container(
-                    width: screenSize(context).width,
-                    height: screenSize(context).height,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        fit: BoxFit.fill,
-                        image: AssetImage(
-                          AppAssets.splash,
-                        ),
+              child: BackgroundWidget(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: screenSize(context).height * .1,
                       ),
-                    ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [
-                        AppColors.grey,
-                        AppColors.grey,
-                      ]),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          height: screenSize(context).height * .1,
-                        ),
-                        PageViewWidget(
-                          onboardingList: cubit.onBoardingStrings,
-                          onPageChange: (value) {
-                            cubit.changeCurrentIndex(value);
-                          },
-                          pageController: cubit.pageController,
-                        ),
-                        DotIndicator(
-                          index: cubit.currentIndex.toDouble(),
-                        ),
-                        SizedBox(
-                          height: screenSize(context).height * .03,
-                        ),
-                        CustomButton(
+                      PageViewWidget(
+                        onboardingList: cubit.onBoardingStrings,
+                        onPageChange: (value) {
+                          cubit.changeCurrentIndex(value);
+                        },
+                        pageController: cubit.pageController,
+                      ),
+                      DotIndicator(
+                        index: cubit.currentIndex.toDouble(),
+                      ),
+                      SizedBox(
+                        height: screenSize(context).height * .03,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        child: CustomButton(
                           function: () {
                             if (cubit.currentIndex == 2) {
-                              navigateOff(context,  const LoginView());
+                              navigateOff(context, const LoginView());
+                            } else {
+                              cubit.checkCurrentIndex();
                             }
-                           else{
-                             cubit.checkCurrentIndex();
-                           }
                           },
                           text:
                               cubit.currentIndex == 2 ? 'Get Started' : 'Next',
                         ),
-                        SizedBox(
-                          height: screenSize(context).height * .1,
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+                      ),
+                      SizedBox(
+                        height: screenSize(context).height * .1,
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
           );
