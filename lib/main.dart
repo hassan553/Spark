@@ -8,11 +8,12 @@ import 'app/my_app.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //Firebase.initializeApp();
-  // setOrientations();
-  DevicePreview(
-    enabled: !kReleaseMode,
-    builder: (context) => Rakna(), // Wrap your app
-  );
+   //setOrientations();
+  // runApp(DevicePreview(
+  //   enabled: !kReleaseMode,
+  //   builder: (context) => Rakna(), // Wrap your app
+  // ));
+  runApp(const Rakna());
 }
 
 void setOrientations() {

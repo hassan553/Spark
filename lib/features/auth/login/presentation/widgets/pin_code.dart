@@ -15,7 +15,7 @@ class PinCodeWidget extends StatelessWidget {
         color: Colors.white30,
       ),
       child: PinCodeFields(
-        length: 6,
+        length: 4,
         fieldBorderStyle: FieldBorderStyle.square,
         responsive: false,
         fieldHeight: 50.0,

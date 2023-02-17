@@ -16,7 +16,7 @@ class SplashOneView extends StatefulWidget {
 class _SplashOneViewState extends State<SplashOneView> {
   @override
   void initState() {
-    Future.delayed(const Duration(milliseconds: 500), () {
+    Future.delayed(const Duration(seconds: 2), () {
       navigateOff(context, const SplashTwoView());
     });
     super.initState();
