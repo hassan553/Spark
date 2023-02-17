@@ -21,6 +21,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       color: AppColors.orange,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
       padding: const EdgeInsets.symmetric(vertical: 15),
       minWidth: screenSize(context).width,
       onPressed: function,

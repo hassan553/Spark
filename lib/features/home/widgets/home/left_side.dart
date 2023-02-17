@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rakna/core/functions/globle_functions.dart';
+import 'package:rakna/core/resources/app_colors.dart';
 import 'package:rakna/features/widgets/custom_text.dart';
 
 class LeftSideWidget extends StatelessWidget {
@@ -34,7 +35,7 @@ class LeftSideWidget extends StatelessWidget {
                   child: Container(
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(218, 230, 230, 235),
+                      color: AppColors.white,
                       borderRadius: BorderRadius.only(
                         topRight: index == 0
                             ? const Radius.circular(10)
@@ -57,13 +58,19 @@ class LeftSideWidget extends StatelessWidget {
                           Container(
                             width: constrainedBox.maxWidth * .7,
                             height: constrainedBox.maxHeight * .7,
-                            color: Colors.red,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: AppColors.white,
+                              image: const DecorationImage(
+                                image: AssetImage('assets/images/car2.png'),
+                              ),
+                            ),
                           ),
                           RotatedBox(
                             quarterTurns: 3,
                             child: CustomTextWidget(
                               text: 'Booked',
-                              fontSize: 8.sp,
+                              fontSize: 10.sp,
                               fontWeight: FontWeight.bold,
                               color: Colors.red,
                             ),

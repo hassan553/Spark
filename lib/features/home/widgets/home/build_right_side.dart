@@ -20,7 +20,6 @@ class RightSideWidget extends StatelessWidget {
       width: screenSize(context).width * .4,
       child: LayoutBuilder(
         builder: (context, constrainedBox) {
-          print(constrainedBox.maxWidth);
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 30),
             child: Column(
@@ -32,7 +31,7 @@ class RightSideWidget extends StatelessWidget {
                 (index) => Container(
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(218, 230, 230, 235),
+                    color: Colors.white,
                     borderRadius: BorderRadius.only(
                       topLeft: index == 0
                           ? const Radius.circular(10)

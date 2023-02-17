@@ -37,7 +37,6 @@ class Rakna extends StatelessWidget {
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-        
           theme: ThemeData(
             fontFamily: GoogleFonts.robotoMono().fontFamily,
             scaffoldBackgroundColor: AppColors.white,
@@ -55,10 +54,9 @@ class Rakna extends StatelessWidget {
               ),
             ),
           ),
-          home: const SplashOneView(),
+          home: const HomeView(),
         ),
       ),
     );
   }
 }
-

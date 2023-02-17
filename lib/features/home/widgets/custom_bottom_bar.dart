@@ -17,6 +17,7 @@ class BottomBarWidget extends StatelessWidget {
       },
       backgroundColor: const Color(0xffA4A4A4),
       currentIndex: index,
+      
       items: [
         const BottomNavigationBarItem(
           icon: Icon(Icons.home),

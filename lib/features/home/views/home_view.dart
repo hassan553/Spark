@@ -17,7 +17,7 @@ class HomeView extends StatelessWidget {
       builder: (context, state) {
         var cubit = HomeCubit.get(context);
         return Scaffold(
-          extendBody: true,
+          extendBody: false,
           body: cubit.screens[cubit.bottomNavigationCurrentIndex],
           bottomNavigationBar: BottomBarWidget(
             function: (index) {
