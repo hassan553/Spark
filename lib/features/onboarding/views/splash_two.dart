@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rakna/features/auth/login/presentation/widgets/build-rich_text.dart';
-import 'package:rakna/features/widgets/background_widget.dart';
+import '../../widgets/background_widget.dart';
 
 import '../../../core/functions/globle_functions.dart';
 import '../../../core/resources/app_assets.dart';
 import '../../../core/resources/app_colors.dart';
+import '../../auth/presentation/login/widgets/build-rich_text.dart';
 import 'onboarding_view.dart';
 
 class SplashTwoView extends StatefulWidget {
@@ -49,11 +49,11 @@ class _SplashTwoViewState extends State<SplashTwoView> {
                 ],
               ),
               SizedBox(
-                height: 20.sp,
+                height: 20.h,
               ),
               const BuildRichText(),
               SizedBox(
-                height: 20.sp,
+                height: 20.h,
               ),
               Text(
                 '''The best parking application for all drivers to park their cars easily''',

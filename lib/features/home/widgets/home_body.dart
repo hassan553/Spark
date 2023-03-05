@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rakna/core/functions/globle_functions.dart';
-import 'package:rakna/features/widgets/background_widget.dart';
+import '../../../core/functions/globle_functions.dart';
+import '../../widgets/background_widget.dart';
 import 'home/book_button.dart';
 import 'home/build_right_side.dart';
 import 'home/entry_text_box.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rakna/features/widgets/background_widget.dart';
+import '../../widgets/background_widget.dart';
 
 import '../../../core/functions/globle_functions.dart';
 import '../../../core/resources/app_colors.dart';

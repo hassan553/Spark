@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:rakna/features/onboarding/views/splash_two.dart';
+import 'splash_two.dart';
 
 import '../../../core/functions/globle_functions.dart';
 import '../../../core/resources/app_assets.dart';

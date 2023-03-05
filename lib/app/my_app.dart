@@ -1,17 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rakna/features/auth/forgetPassword/model_view/forget_passord_cubit.dart';
-import 'package:rakna/features/auth/login/presentation/views/login_view.dart';
-import 'package:rakna/features/auth/register/register/register_cubit.dart';
-import 'package:rakna/features/home/manager/home_cubit.dart';
-import 'package:rakna/features/home/views/home_view.dart';
-
+import '../features/home/manager/home_cubit.dart';
 import '../core/resources/app_colors.dart';
-import '../features/auth/login/view_model/login_cubit.dart';
-import 'package:device_preview/device_preview.dart';
+import '../features/auth/data/repository/login_repo.dart';
+import '../features/auth/presentation/forgetPassword/manager/forget_passord_cubit.dart';
+import '../features/auth/presentation/login/manager/login_cubit.dart';
+import '../features/auth/presentation/register/manager/register_cubit.dart';
 import '../features/onboarding/views/splash_one.dart';
 
 class Rakna extends StatelessWidget {
@@ -26,7 +22,7 @@ class Rakna extends StatelessWidget {
             create: (context) => HomeCubit(),
           ),
           BlocProvider(
-            create: (context) => LoginCubit(),
+            create: (context) => LoginCubit(LoginRepositoryImpl()),
           ),
           BlocProvider(
             create: (context) => ForgetPassWordCubit(),
@@ -38,7 +34,7 @@ class Rakna extends StatelessWidget {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            fontFamily: GoogleFonts.robotoMono().fontFamily,
+            fontFamily: GoogleFonts.robotoCondensed().fontFamily,
             scaffoldBackgroundColor: AppColors.white,
             primaryColor: AppColors.orange,
             bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -54,7 +50,7 @@ class Rakna extends StatelessWidget {
               ),
             ),
           ),
-          home: const HomeView(),
+          home: const SplashOneView(),
         ),
       ),
     );

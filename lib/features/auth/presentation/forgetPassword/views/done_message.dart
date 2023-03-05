@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:rakna/core/functions/globle_functions.dart';
-import 'package:rakna/features/auth/login/presentation/views/login_view.dart';
-import 'package:rakna/features/widgets/background_widget.dart';
+import '../../../../../core/functions/globle_functions.dart';
+import '../../../../widgets/background_widget.dart';
 
 class DoneMessageView extends StatefulWidget {
   final String message;

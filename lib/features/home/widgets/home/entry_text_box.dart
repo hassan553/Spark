@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:rakna/core/resources/app_colors.dart';
+import '../../../../core/resources/app_colors.dart';
 
 import '../../../widgets/custom_text.dart';
 

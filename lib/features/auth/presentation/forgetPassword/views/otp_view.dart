@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rakna/features/auth/forgetPassword/presentation/views/reset_password_view.dart';
-import 'package:rakna/features/auth/login/presentation/widgets/build-rich_text.dart';
-import 'package:rakna/features/auth/login/presentation/widgets/pin_code.dart';
-import 'package:rakna/features/widgets/background_widget.dart';
-import 'package:rakna/features/widgets/custom_button.dart';
+import 'reset_password_view.dart';
+import '../../../../widgets/background_widget.dart';
+import '../../../../widgets/custom_button.dart';
 import '../../../../../core/functions/globle_functions.dart';
 import '../../../../../core/resources/app_colors.dart';
 import '../../../../widgets/custom_text.dart';
+import '../../login/widgets/build-rich_text.dart';
+import '../../login/widgets/pin_code.dart';
 
 class OTPView extends StatelessWidget {
   const OTPView({super.key});

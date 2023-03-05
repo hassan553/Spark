@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rakna/core/functions/globle_functions.dart';
-import 'package:rakna/core/resources/app_colors.dart';
-import 'package:rakna/features/setting/views/profile_view.dart';
-import 'package:rakna/features/widgets/custom_button.dart';
-import 'package:rakna/features/widgets/custom_text.dart';
+import '../../../core/functions/globle_functions.dart';
+import '../../../core/resources/app_colors.dart';
+import 'profile_view.dart';
+import '../../widgets/custom_button.dart';
+import '../../widgets/custom_text.dart';
 import '../../widgets/background_widget.dart';
 
 class SettingView extends StatelessWidget {

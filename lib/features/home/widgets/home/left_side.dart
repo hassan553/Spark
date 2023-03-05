@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rakna/core/functions/globle_functions.dart';
-import 'package:rakna/core/resources/app_colors.dart';
-import 'package:rakna/features/widgets/custom_text.dart';
+import '../../../../core/functions/globle_functions.dart';
+import '../../../../core/resources/app_colors.dart';
+import '../../../widgets/custom_text.dart';
 
 class LeftSideWidget extends StatelessWidget {
   const LeftSideWidget({super.key});
@@ -62,7 +62,7 @@ class LeftSideWidget extends StatelessWidget {
                               borderRadius: BorderRadius.circular(15),
                               color: AppColors.white,
                               image: const DecorationImage(
-                                image: AssetImage('assets/images/car2.png'),
+                                image: AssetImage('assets/images/car2.PNG'),
                               ),
                             ),
                           ),

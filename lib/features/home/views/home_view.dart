@@ -1,9 +1,5 @@
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rakna/core/resources/app_colors.dart';
-
-import '../../widgets/background_widget.dart';
 import '../manager/home_cubit.dart';
 import '../widgets/custom_bottom_bar.dart';
 

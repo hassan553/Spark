@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rakna/features/home/views/home_view.dart';
-import 'package:rakna/features/widgets/background_widget.dart';
-import 'package:rakna/features/widgets/custom_button.dart';
-import 'package:rakna/features/widgets/custom_text.dart';
+import '../../../../home/views/home_view.dart';
+import '../../../../widgets/background_widget.dart';
+import '../../../../widgets/custom_button.dart';
+import '../../../../widgets/custom_text.dart';
 
-import '../../../../core/functions/globle_functions.dart';
-import '../../../../core/resources/app_assets.dart';
-import '../../../../core/resources/app_colors.dart';
-import '../../../widgets/custom_text_field.dart';
-import '../../forgetPassword/presentation/views/done_message.dart';
-import '../../login/presentation/views/login_view.dart';
+import '../../../../../core/functions/globle_functions.dart';
+import '../../../../../core/resources/app_colors.dart';
+import '../../../../widgets/custom_text_field.dart';
+import '../../forgetPassword/views/done_message.dart';
+
 
 class CarInfoView extends StatelessWidget {
   const CarInfoView({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:rakna/core/resources/app_colors.dart';
-import 'package:rakna/features/widgets/background_widget.dart';
+import '../../../core/resources/app_colors.dart';
+import '../../widgets/background_widget.dart';
 
 import '../../../core/functions/globle_functions.dart';
 import '../../widgets/custom_button.dart';
@@ -73,7 +73,7 @@ class ProfileView extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                           color: AppColors.white,
                           image: const DecorationImage(
-                            image: AssetImage('assets/images/car.png'),
+                            image: AssetImage('assets/images/car.PNG'),
                           ),
                         ),
                       ),

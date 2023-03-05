@@ -3,10 +3,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
+import '../../../data/model/user_model.dart';
+import '../../../data/repository/login_repo.dart';
+
+
 part 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {
-  LoginCubit() : super(LoginInitial());
+  LoginRepository loginRepository;
+  LoginCubit(this.loginRepository) : super(LoginInitial());
   static LoginCubit get(context) => BlocProvider.of(context);
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
@@ -28,9 +33,17 @@ class LoginCubit extends Cubit<LoginState> {
     emit(LoginValidPasswordState());
   }
 
-  disposeControllers() {
-    emailController.dispose();
-    passwordController.dispose();
-    
+  Future userLogin(String email, String password) async {
+    emit(LoginLoadingState());
+    var result = await loginRepository.login(email, password);
+    result.fold((l) {
+      emit(LoginErrorState(l));
+    }, (r) {
+      if (r.status == false) {
+        emit(LoginErrorState(r.message.toString()));
+      } else {
+        emit(LoginSuccessState(r));
+      }
+    });
   }
 }

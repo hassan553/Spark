@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rakna/features/widgets/background_widget.dart';
-import '../../auth/login/presentation/views/login_view.dart';
+import '../../widgets/background_widget.dart';
+import '../../auth/presentation/login/views/login_view.dart';
 import '../model_view/onboarding_cubit.dart';
 import '../widgets/dots_widget.dart';
 import '../../widgets/custom_button.dart';
-import '../../../core/resources/app_assets.dart';
-import '../../../core/resources/app_colors.dart';
 import '../../../core/functions/globle_functions.dart';
 import '../widgets/page_view.dart';
 

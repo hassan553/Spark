@@ -29,10 +29,15 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  animated_snack_bar: ^0.3.0
+  badges: ^3.0.2
   cloud_firestore: ^3.2.1
   conditional_builder_null_safety: ^0.0.6
   cupertino_icons: ^1.0.2
+  dartz: ^0.10.1
+  device_preview: ^1.1.0
   dots_indicator: ^2.1.0
+  equatable: ^2.0.5
   firebase_auth: ^3.4.1
   firebase_core: ^1.19.1
   firebase_core_platform_interface: 4.5.1
@@ -46,16 +51,15 @@ dependencies:
   flutter_screenutil: ^5.6.0
   flutter_svg: ^1.1.6
   get: ^4.6.5
+  get_it: ^7.2.0
   google_fonts: ^3.0.1
   http: ^0.13.4
   icons_plus: ^1.0.2
   image_picker: ^0.8.5+3
+  internet_connection_checker: ^1.0.0+1
   lottie: ^2.2.0
   shared_preferences: ^2.0.16
   uuid: ^3.0.7
-  badges: ^3.0.2
-  device_preview: ^1.1.0
-
 
 dev_dependencies:
   flutter_lints: ^2.0.0

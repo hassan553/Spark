@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rakna/core/functions/globle_functions.dart';
-import 'package:rakna/features/widgets/custom_text.dart';
+import '../../../core/functions/globle_functions.dart';
+import '../../widgets/custom_text.dart';
 
 import '../../widgets/background_widget.dart';
 
