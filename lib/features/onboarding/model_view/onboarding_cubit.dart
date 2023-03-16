@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import 'package:meta/meta.dart';
 
 import '../../../core/resources/app_assets.dart';
@@ -17,18 +18,18 @@ class OnboardingCubit extends Cubit<OnboardingState> {
   List<OnBoardingModel> onBoardingStrings = [
     OnBoardingModel(
       image: AppAssets.logo,
-      title: 'Best Parking Spots',
-      subTitle: 'Find the best parking spots near you',
+      title: 'Best Parking Spots'.tr,
+      subTitle: 'Find the best parking spots near you'.tr,
     ),
     OnBoardingModel(
       image: AppAssets.tap,
-      title: 'Quick Navigation',
-      subTitle: 'Navigate quickly in crowded garage',
+      title: 'Quick Navigation'.tr,
+      subTitle: 'Navigate quickly in crowded garage'.tr,
     ),
     OnBoardingModel(
       image: AppAssets.payment,
-      title: 'Easy Payments',
-      subTitle: 'Hassle free payment to save your time ',
+      title: 'Easy Payments'.tr,
+      subTitle: 'Hassle free payment to save your time'.tr,
     ),
   ];
   changeCurrentIndex(index) {

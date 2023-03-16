@@ -1,11 +1,13 @@
 import 'package:get_it/get_it.dart';
 
 import '../../features/auth/data/repository/login_repo.dart';
+import '../../features/auth/data/repository/register_repo.dart';
 
-GetIt gitIt = GetIt.instance;
+final gitIt = GetIt.instance;
 
 class ServicesLector {
   static init() {
-    gitIt.registerLazySingleton(() => LoginRepositoryImpl());
+    gitIt.registerLazySingleton<LoginRepository>(() => LoginRepositoryImpl());
+    gitIt.registerLazySingleton<RegisterRepository>(() => RegisterRepositoryImpl());
   }
 }

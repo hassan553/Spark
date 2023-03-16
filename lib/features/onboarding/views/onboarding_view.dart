@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import '../../widgets/background_widget.dart';
 import '../../auth/presentation/login/views/login_view.dart';
 import '../model_view/onboarding_cubit.dart';
@@ -23,7 +24,7 @@ class OnBoardingView extends StatelessWidget {
             body: SafeArea(
               child: BackgroundWidget(
                 child: Align(
-                  alignment: Alignment.center,
+                  alignment: AlignmentDirectional.center,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -54,7 +55,7 @@ class OnBoardingView extends StatelessWidget {
                             }
                           },
                           text:
-                              cubit.currentIndex == 2 ? 'Get Started' : 'Next',
+                              cubit.currentIndex == 2 ? 'get_started'.tr : 'next'.tr,
                         ),
                       ),
                       SizedBox(

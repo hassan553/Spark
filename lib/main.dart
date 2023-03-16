@@ -14,7 +14,7 @@ void main() async {
   //   builder: (context) => Rakna(), // Wrap your app
   // ));
   sharedPreferences =await  SharedPreferences.getInstance();
-  ServicesLector.init();
+  await ServicesLector.init();
   runApp(const Rakna());
 }
 

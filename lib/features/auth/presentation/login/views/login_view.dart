@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:icons_plus/icons_plus.dart';
 import '../../../../widgets/background_widget.dart';
 import '../../../../widgets/custom_button.dart';
@@ -32,10 +33,7 @@ class LoginView extends StatefulWidget {
 
 class _LoginViewState extends State<LoginView> {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
-  @override
-  void dispose() {
-    super.dispose();
-  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +45,7 @@ class _LoginViewState extends State<LoginView> {
               message: 'Successfully Login',
               requestStates: RequestStates.success);
           sharedPreferences
-              .setString('userModel', jsonEncode(state.userModel))
+              .setString('token', state.userModel.data!.token!)
               .then((value) {
             print(value);
             navigateOff(context, const HomeView());
@@ -69,10 +67,10 @@ class _LoginViewState extends State<LoginView> {
             child: SafeArea(
               child: BackgroundWidget(
                 child: Align(
-                  alignment: Alignment.center,
+                  alignment: AlignmentDirectional.center,
                   child: SingleChildScrollView(
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(
+                      padding: const EdgeInsetsDirectional.symmetric(
                         horizontal: 25,
                       ),
                       child: Form(
@@ -85,7 +83,7 @@ class _LoginViewState extends State<LoginView> {
                             ),
                             const BuildRichText(),
                             CustomTextWidget(
-                              text: 'Park your car ',
+                              text: 'Park your car'.tr,
                               fontSize: 13.sp,
                               fontWeight: FontWeight.bold,
                               color: Colors.black45,
@@ -95,14 +93,14 @@ class _LoginViewState extends State<LoginView> {
                             ),
                             CustomTextFieldWidget(
                               controller: cubit.emailController,
-                              hintText: 'Email address',
+                              hintText: 'Email address'.tr,
                               iconData: Icons.email_outlined,
                               keyboard: TextInputType.emailAddress,
                               valid: (value) {
                                 if (value.isEmpty) {
-                                  return 'not valid empty value';
-                                } else if (!value.contains('@gmail.com')) {
-                                  return 'not valid email ';
+                                  return 'not valid empty value'.tr;
+                                } else if (!value.contains('@')) {
+                                  return 'not valid email'.tr;
                                 }
                               },
                             ),
@@ -111,15 +109,13 @@ class _LoginViewState extends State<LoginView> {
                             ),
                             CustomTextFieldWidget(
                               controller: cubit.passwordController,
-                              hintText: 'Password',
+                              hintText: 'Password'.tr,
                               iconData: Icons.lock,
                               obscure: true,
                               valid: (value) {
                                 if (value.isEmpty) {
-                                  return 'not valid empty value';
-                                } else if (value.length < 8) {
-                                  return 'short password length ';
-                                }
+                                  return 'not valid empty value'.tr;
+                                } 
                               },
                             ),
                             SizedBox(
@@ -130,9 +126,9 @@ class _LoginViewState extends State<LoginView> {
                                 navigateTo(context, const ForgetPasswordView());
                               },
                               child: Align(
-                                alignment: Alignment.topLeft,
+                                alignment: AlignmentDirectional.topStart,
                                 child: CustomTextWidget(
-                                  text: 'Forget Password ?',
+                                  text: 'Forget Password ?'.tr,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20.sp,
                                 ),
@@ -150,16 +146,14 @@ class _LoginViewState extends State<LoginView> {
                                 width: screenSize(context).width,
                                 child: CustomButton(
                                   function: () {
-                                    // if (formKey.currentState!.validate()) {
-                                    //   cubit.userLogin(
-                                    //       cubit.emailController.text.trim(),
-                                    //       cubit.passwordController.text.trim());
-                                    // }
-                                    cubit.userLogin(
-                                        cubit.emailController.text.trim(),
-                                        cubit.passwordController.text.trim());
+                                    if (formKey.currentState!.validate()) {
+                                      cubit.userLogin(
+                                          cubit.emailController.text.trim(),
+                                          cubit.passwordController.text.trim());
+                                    }
+                                   
                                   },
-                                  text: 'Sign In',
+                                  text: 'Sign In'.tr,
                                 ),
                               ),
                               duration: const Duration(milliseconds: 500),
@@ -170,7 +164,7 @@ class _LoginViewState extends State<LoginView> {
                             Row(
                               children: [
                                 CustomTextWidget(
-                                  text: "Don\'t have an account ? ",
+                                  text: "Don\'t have an account ?".tr,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 15.sp,
                                 ),
@@ -179,7 +173,7 @@ class _LoginViewState extends State<LoginView> {
                                     navigateTo(context, const RegisterView());
                                   },
                                   child: CustomTextWidget(
-                                    text: "Sign Up",
+                                    text: "Sign Up".tr,
                                     fontSize: 15.sp,
                                     fontWeight: FontWeight.bold,
                                     color: AppColors.orange,
@@ -201,7 +195,7 @@ class _LoginViewState extends State<LoginView> {
                                   child: BuildSocialWidget(
                                     iconData: FontAwesome.facebook,
                                     onTap: () {},
-                                    text: 'Facebook',
+                                    text: 'Facebook'.tr,
                                   ),
                                 ),
                                 SizedBox(
@@ -212,7 +206,7 @@ class _LoginViewState extends State<LoginView> {
                                   child: BuildSocialWidget(
                                     iconData: FontAwesome.google,
                                     onTap: () {},
-                                    text: 'Google',
+                                    text: 'Google'.tr,
                                   ),
                                 ),
                               ],

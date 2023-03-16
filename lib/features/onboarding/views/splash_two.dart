@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import '../../widgets/background_widget.dart';
-
+import '../../../core/resources/app_strings.dart';
 import '../../../core/functions/globle_functions.dart';
 import '../../../core/resources/app_assets.dart';
 import '../../../core/resources/app_colors.dart';
@@ -28,16 +29,16 @@ class _SplashTwoViewState extends State<SplashTwoView> {
     return Scaffold(
       body: BackgroundWidget(
         child: Padding(
-          padding: const EdgeInsets.only(left: 20, right: 10),
+          padding: const EdgeInsetsDirectional.only(start: 20, end: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Row(
                 children: [
-                  const Text(
-                    'Welcome To',
-                    style: TextStyle(
+                  Text(
+                    AppStrings.welcome.tr,
+                    style: const TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
                       color: AppColors.white,
@@ -56,7 +57,7 @@ class _SplashTwoViewState extends State<SplashTwoView> {
                 height: 20.h,
               ),
               Text(
-                '''The best parking application for all drivers to park their cars easily''',
+                AppStrings.splash.tr,
                 style: TextStyle(
                   fontSize: 20.sp,
                   fontWeight: FontWeight.bold,
