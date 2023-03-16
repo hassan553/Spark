@@ -1,9 +1,8 @@
 import 'package:bottom_sheet/bottom_sheet.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rakna/features/home/manager/home_cubit.dart';
+import 'package:get/get.dart';
+import 'package:rakna/features/home/controller/home_controller.dart';
+
 import '../../../core/resources/app_colors.dart';
 import '../../widgets/background_widget.dart';
 
@@ -16,118 +15,114 @@ class ProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<HomeCubit, HomeState>(
-      listener: (context, state) {
-        // TODO: implement listener
-      },
-      builder: (context, state) {
-        var cubit = HomeCubit.get(context);
+   
         return Scaffold(
           body: SafeArea(
             child: BackgroundWidget(
               child: Padding(
                 padding: const EdgeInsetsDirectional.only(
                     start: 20, end: 20, bottom: 20),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Spacer(
-                      flex: 1,
-                    ),
-                    Stack(
-                      alignment: AlignmentDirectional.bottomEnd,
-                      children: [
-                        CircleAvatar(
-                          radius: 50,
-                          backgroundImage:
-                              NetworkImage(cubit.userModel!.data!.image!),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            cubit.chooseImageFromCamera();
-                            //_showBottomSheetWidget(context);
-                          },
-                          child: CircleAvatar(
-                            radius: 15,
-                            backgroundColor: AppColors.offWhite,
-                            child: const Icon(
-                              Icons.camera_alt,
-                              color: AppColors.black,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    // const SizedBox(
-                    //   height: 10,
-                    // ),
-                    // CustomTextWidget(
-                    //   text: cubit.userModel!.data!.name!,
-                    //   fontWeight: FontWeight.bold,
-                    //   fontSize: 20,
-                    // ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Container(
-                      padding: const EdgeInsetsDirectional.all(5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: AppColors.offWhite,
+                child: GetBuilder<HomeController>(
+                  builder:(controller) =>  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Spacer(
+                        flex: 1,
                       ),
-                      width: screenSize(context).width,
-                      child: Row(
+                      Stack(
+                        alignment: AlignmentDirectional.bottomEnd,
                         children: [
-                          Container(
-                            width: 50,
-                            height: 60,
-                            padding: const EdgeInsetsDirectional.all(5),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: AppColors.white,
-                              image: const DecorationImage(
-                                image: AssetImage('assets/images/car.PNG'),
+                          CircleAvatar(
+                            radius: 50,
+                            backgroundImage:
+                                NetworkImage(controller.userModel!.data!.image!),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              controller.chooseImageFromCamera();
+                              //_showBottomSheetWidget(context);
+                            },
+                            child: CircleAvatar(
+                              radius: 15,
+                              backgroundColor: AppColors.offWhite,
+                              child: const Icon(
+                                Icons.camera_alt,
+                                color: AppColors.black,
                               ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 15,
-                          ),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                CustomTextWidget(
-                                  text: cubit.userModel!.data!.name!,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                                CustomTextWidget(
-                                  text: 'Red|Mercedes',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13,
-                                ),
-                              ],
                             ),
                           ),
                         ],
                       ),
-                    ),
-                    const Spacer(
-                      flex: 2,
-                    ),
-                    CustomButton(
-                      function: () {},
-                      text: 'Add Car ',
-                    ),
-                  ],
+                      // const SizedBox(
+                      //   height: 10,
+                      // ),
+                      // CustomTextWidget(
+                      //   text: cubit.userModel!.data!.name!,
+                      //   fontWeight: FontWeight.bold,
+                      //   fontSize: 20,
+                      // ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Container(
+                        padding: const EdgeInsetsDirectional.all(5),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: AppColors.offWhite,
+                        ),
+                        width: screenSize(context).width,
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 60,
+                              padding: const EdgeInsetsDirectional.all(5),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                color: AppColors.white,
+                                image: const DecorationImage(
+                                  image: AssetImage('assets/images/car.PNG'),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 15,
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  CustomTextWidget(
+                                    text: controller.userModel!.data!.name!,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                  CustomTextWidget(
+                                    text: 'Red|Mercedes',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 13,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Spacer(
+                        flex: 2,
+                      ),
+                      CustomButton(
+                        function: () {},
+                        text: 'Add Car ',
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
           ),
         );
-      },
-    );
+     
   }
 
   void _showBottomSheetWidget(BuildContext context) {

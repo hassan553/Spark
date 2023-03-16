@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rakna/core/helper/binding.dart';
 import '../core/localization/local.dart';
 import '../core/localization/local_controller.dart';
-import '../core/screvice_locator/screvices.dart';
-import '../features/auth/data/repository/register_repo.dart';
-import '../features/home/manager/home_cubit.dart';
 import '../core/resources/app_colors.dart';
-import '../features/auth/presentation/forgetPassword/manager/forget_passord_cubit.dart';
-import '../features/auth/presentation/login/manager/login_cubit.dart';
-import '../features/auth/presentation/register/manager/register_cubit.dart';
 import '../features/onboarding/views/splash_one.dart';
 import 'package:get/get.dart';
 
@@ -21,25 +15,11 @@ class Rakna extends StatelessWidget {
   Widget build(BuildContext context) {
     LocalController controller = Get.put(LocalController());
     return ScreenUtilInit(
-      builder: (context, child) => MultiBlocProvider(
-        providers: [
-          BlocProvider(
-            create: (context) => HomeCubit()..getUserData(),
-          ),
-          BlocProvider(
-            create: (context) => LoginCubit(gitIt()),
-          ),
-          BlocProvider(
-            create: (context) => ForgetPassWordCubit(),
-          ),
-          BlocProvider(
-            create: (context) => RegisterCubit(gitIt()),
-          ),
-        ],
-        child: GetMaterialApp(
+      builder: (context, child) =>  GetMaterialApp(
           debugShowCheckedModeBanner: false,
           locale: controller.initailLocal,
           translations: MyLocal(),
+          initialBinding: Binding(),
           theme: ThemeData(
             fontFamily: GoogleFonts.robotoCondensed().fontFamily,
             scaffoldBackgroundColor: AppColors.white,
@@ -59,7 +39,7 @@ class Rakna extends StatelessWidget {
           ),
           home: const SplashOneView(),
         ),
-      ),
+      
     );
   }
 }

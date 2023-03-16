@@ -9,7 +9,7 @@ import '../../../../../core/resources/app_colors.dart';
 import '../../../../widgets/custom_text.dart';
 import '../../login/views/login_view.dart';
 import '../../login/widgets/build-rich_text.dart';
-import '../manager/forget_passord_cubit.dart';
+
 import 'done_message.dart';
 
 class ResetPasswordView extends StatelessWidget {
@@ -17,9 +17,9 @@ class ResetPasswordView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<ForgetPassWordCubit, ForgetPassordState>(
-      listener: (context, state) {},
-      builder: (context, state) => Scaffold(
+    var passwordController = TextEditingController();
+    
+    return Scaffold(
         extendBodyBehindAppBar: true,
         extendBody: true,
         appBar: AppBar(
@@ -89,7 +89,7 @@ class ResetPasswordView extends StatelessWidget {
                       ),
                       CustomTextFieldWidget(
                         controller:
-                            ForgetPassWordCubit.get(context).passWordController,
+                            passwordController,
                         hintText: 'via E-mail',
                         iconData: Icons.email_outlined,
                       ),
@@ -98,7 +98,7 @@ class ResetPasswordView extends StatelessWidget {
                       ),
                       CustomTextFieldWidget(
                         controller:
-                            ForgetPassWordCubit.get(context).passWordController,
+                            passwordController,
                         hintText: 'via E-mail',
                         iconData: Icons.email_outlined,
                       ),
@@ -135,7 +135,7 @@ class ResetPasswordView extends StatelessWidget {
             )
           ],
         ),
-      ),
+      
     );
   }
 }

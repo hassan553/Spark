@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../manager/home_cubit.dart';
+import 'package:get/get.dart';
+import '../controller/home_controller.dart';
+
 import '../widgets/custom_bottom_bar.dart';
 
 class HomeView extends StatelessWidget {
@@ -8,21 +10,21 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<HomeCubit, HomeState>(
-      listener: (context, state) {},
-      builder: (context, state) {
-        var cubit = HomeCubit.get(context);
-        return Scaffold(
-          extendBody: false,
-          body: cubit.screens[cubit.bottomNavigationCurrentIndex],
-          bottomNavigationBar: BottomBarWidget(
-            function: (index) {
-              cubit.changeBottomNavigationCurrentIndex(index);
-            },
-            index: cubit.bottomNavigationCurrentIndex,
-          ),
-        );
-      },
+    return Scaffold(
+      extendBody: false,
+      body: GetBuilder(
+        init: HomeController(),
+        builder: (controller) =>
+            controller.screens[controller.bottomNavigationCurrentIndex],
+      ),
+      bottomNavigationBar: GetBuilder<HomeController>(
+        builder: (controller) => BottomBarWidget(
+          function: (index) {
+            controller.changeBottomNavigationCurrentIndex(index);
+          },
+          index: controller.bottomNavigationCurrentIndex,
+        ),
+      ),
     );
   }
 }

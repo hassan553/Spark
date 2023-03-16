@@ -1,26 +1,19 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meta/meta.dart';
-import 'package:rakna/main.dart';
+import 'package:get/get.dart';
+
+import '../../../main.dart';
 import '../../auth/data/model/user_model.dart';
-import '../data/repository/home_repo.dart';
-import '../views/home_view.dart';
 import '../../notification_view.dart/views/notification_view.dart';
 import '../../setting/views/setting_view.dart';
-
+import '../data/repository/home_repo.dart';
 import '../widgets/home_body.dart';
 
-part 'home_state.dart';
-
-class HomeCubit extends Cubit<HomeState> {
+class HomeController extends GetxController {
   HomeRepo homeRepo = HomeRepo();
-  HomeCubit() : super(HomeInitial());
-  static HomeCubit get(context) => BlocProvider.of(context);
   int bottomNavigationCurrentIndex = 0;
   void changeBottomNavigationCurrentIndex(int index) {
     bottomNavigationCurrentIndex = index;
-    emit(ChangeBottomNavigationCurrentIndexState());
+    update();
   }
 
   List<Widget> screens = const [
@@ -33,10 +26,10 @@ class HomeCubit extends Cubit<HomeState> {
     String? token = sharedPreferences.getString('token');
     var result = await homeRepo.getUserProfile(token!);
     result.fold((l) {
-      emit(GetUserDataError());
+         update();
     }, (r) {
       userModel = r;
-      emit(GetUserDataSuccess());
+      update();
     });
   }
 
@@ -46,11 +39,11 @@ class HomeCubit extends Cubit<HomeState> {
       await homeRepo.chooseImage().then((value) {
         homeRepo.uploadImage(token!);
         print('Success uplaod');
-        emit(UpdateUserImageSuccess());
+           update();
       });
     } catch (error) {
       print('Success ${error.toString()}');
-      emit(UpdateUserImageError());
+         update();
     }
   }
 }
