@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import '../../../core/functions/globle_functions.dart';
 import '../../../core/resources/app_colors.dart';
+import '../controller/setting_controller.dart';
 import 'profile_view.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/custom_text.dart';
 import '../../widgets/background_widget.dart';
 
 class SettingView extends StatelessWidget {
-  const SettingView({super.key});
+  final SettingController settingController = Get.find();
+  SettingView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +26,7 @@ class SettingView extends StatelessWidget {
               flex: 1,
             ),
             CustomTextWidget(
-              text: 'Settings',
+              text: 'homeText42'.tr,
               fontWeight: FontWeight.bold,
             ),
             const SizedBox(
@@ -57,7 +61,7 @@ class SettingView extends StatelessWidget {
                           fontSize: 16,
                         ),
                         CustomTextWidget(
-                          text: 'My Profile',
+                          text: 'homeText41'.tr,
                           fontWeight: FontWeight.w500,
                           fontSize: 14,
                         ),
@@ -67,12 +71,51 @@ class SettingView extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            GetBuilder<SettingController>(
+              builder: (controller) => Row(
+                children: [
+                  Expanded(
+                    child: RadioListTile(
+                      value: true,
+                      groupValue: settingController.groupValue,
+                      onChanged: (value) {
+                        settingController.changeToEnglish(value!);
+                      },
+                      title: CustomTextWidget(
+                        text: 'homeText40'.tr,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14.sp,
+                        color: AppColors.black,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: RadioListTile(
+                      value: false,
+                      groupValue: settingController.groupValue,
+                      onChanged: (value) {
+                        settingController.changeToArabic(value!);
+                      },
+                      title: CustomTextWidget(
+                        text: 'homeText39'.tr,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14.sp,
+                        color: AppColors.black,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
             const Spacer(
               flex: 3,
             ),
             CustomButton(
               function: () {},
-              text: 'Log Out',
+              text: 'homeText38'.tr,
             ),
           ],
         ),

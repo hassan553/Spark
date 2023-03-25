@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:get/get.dart';
 import '../../../../core/resources/app_colors.dart';
 
 import '../../../widgets/custom_text.dart';
@@ -20,7 +21,7 @@ class EntryBoxTextWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         child: CustomTextWidget(
-          text: 'Entry',
+          text: 'homeText2'.tr,
           fontWeight: FontWeight.bold,
         ),
       ),

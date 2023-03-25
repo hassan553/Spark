@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import '../../../../core/functions/globle_functions.dart';
 import '../../../../core/resources/app_colors.dart';
 import '../../../widgets/custom_text.dart';
@@ -12,9 +13,9 @@ class LeftSideWidget extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
         color: Color(0xff373737),
-        borderRadius: BorderRadius.only(
-          topRight: Radius.circular(60),
-          bottomRight: Radius.circular(60),
+        borderRadius: BorderRadiusDirectional.only(
+          topEnd: Radius.circular(60),
+          bottomEnd: Radius.circular(60),
         ),
       ),
       height: screenSize(context).height * .64,
@@ -23,7 +24,7 @@ class LeftSideWidget extends StatelessWidget {
         builder: (context, constrainedBox) {
           print(constrainedBox.maxWidth);
           return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 30),
+            padding: const EdgeInsetsDirectional.symmetric(vertical: 30),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -46,7 +47,7 @@ class LeftSideWidget extends StatelessWidget {
                       ),
                     ),
                     width: constrainedBox.maxWidth,
-                    margin: const EdgeInsets.only(left: 2, bottom: 2, right: 1),
+                    margin: const EdgeInsetsDirectional.only(start: 2, bottom: 2, end: 1),
                     height: constrainedBox.maxHeight * .13,
                     child: AnimatedCrossFade(
                       duration: const Duration(milliseconds: 500),
@@ -69,7 +70,7 @@ class LeftSideWidget extends StatelessWidget {
                           RotatedBox(
                             quarterTurns: 3,
                             child: CustomTextWidget(
-                              text: 'Booked',
+                              text: 'homeText5'.tr,
                               fontSize: 10.sp,
                               fontWeight: FontWeight.bold,
                               color: Colors.red,

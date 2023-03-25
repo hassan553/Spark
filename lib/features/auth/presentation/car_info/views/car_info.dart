@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import '../../../../home/views/home_view.dart';
 import '../../../../widgets/background_widget.dart';
 import '../../../../widgets/custom_button.dart';
@@ -26,7 +27,7 @@ class CarInfoView extends StatelessWidget {
                 height: screenSize(context).height * .1,
               ),
               CustomTextWidget(
-                text: 'My car',
+                text: 'homeText28'.tr,
                 fontSize: 18.sp,
               ),
               const SizedBox(
@@ -40,7 +41,7 @@ class CarInfoView extends StatelessWidget {
                 height: 5,
               ),
               CustomTextWidget(
-                text: 'Enter your car details',
+                text: 'homeText29'.tr,
                 fontSize: 20.sp,
                 fontWeight: FontWeight.bold,
               ),
@@ -50,7 +51,7 @@ class CarInfoView extends StatelessWidget {
               Align(
                 alignment: Alignment.center,
                 child: CustomTextWidget(
-                  text: 'Car number',
+                  text: 'homeText30'.tr,
                   fontSize: 18.sp,
                 ),
               ),
@@ -58,7 +59,7 @@ class CarInfoView extends StatelessWidget {
                 height: 8,
               ),
               CustomTextFieldWidget(
-                hintText: 'Enter your car number',
+                hintText: 'homeText31'.tr,
                 controller: TextEditingController(),
               ),
               SizedBox(
@@ -67,7 +68,7 @@ class CarInfoView extends StatelessWidget {
               Align(
                 alignment: Alignment.center,
                 child: CustomTextWidget(
-                  text: 'Car model',
+                  text: 'homeText32'.tr,
                   fontSize: 18.sp,
                 ),
               ),
@@ -75,7 +76,7 @@ class CarInfoView extends StatelessWidget {
                 height: 8,
               ),
               CustomTextFieldWidget(
-                hintText: 'Enter your car model',
+                hintText: 'homeText33'.tr,
                 controller: TextEditingController(),
               ),
               SizedBox(
@@ -84,7 +85,7 @@ class CarInfoView extends StatelessWidget {
               Align(
                 alignment: Alignment.center,
                 child: CustomTextWidget(
-                  text: 'Car color',
+                  text: 'homeText34'.tr,
                   fontSize: 18.sp,
                 ),
               ),
@@ -92,7 +93,7 @@ class CarInfoView extends StatelessWidget {
                 height: 8,
               ),
               CustomTextFieldWidget(
-                hintText: 'Enter your car color',
+                hintText: 'homeText35'.tr,
                 controller: TextEditingController(),
               ),
               SizedBox(
@@ -102,13 +103,13 @@ class CarInfoView extends StatelessWidget {
                 function: () {
                   navigateTo(
                     context,
-                    const DoneMessageView(
-                      message: 'Email has\n successfully\n created',
+                     DoneMessageView(
+                      message: 'homeText36'.tr,
                       screen: HomeView(),
                     ),
                   );
                 },
-                text: 'Add Car',
+                text: 'homeText37'.tr,
               ),
             ],
           ),

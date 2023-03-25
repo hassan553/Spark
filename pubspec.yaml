@@ -31,16 +31,19 @@ environment:
 dependencies:
   animated_snack_bar: ^0.3.0
   badges: ^3.0.2
+  bottom_sheet: ^3.1.2
   cloud_firestore: ^3.2.1
   conditional_builder_null_safety: ^0.0.6
   cupertino_icons: ^1.0.2
   dartz: ^0.10.1
   device_preview: ^1.1.0
   dots_indicator: ^2.1.0
+  dotted_border: ^2.0.0+3
   equatable: ^2.0.5
   firebase_auth: ^3.4.1
   firebase_core: ^1.19.1
-  firebase_core_platform_interface: 4.5.1
+  firebase_core_platform_interface: 4.5.1 
+  firebase_messaging: ^13.1.0
   firebase_storage: ^10.3.1
   floating_bottom_navigation_bar: ^1.5.2
   flutter:
@@ -53,6 +56,7 @@ dependencies:
   get: ^4.6.5
   get_it: ^7.2.0
   google_fonts: ^3.0.1
+  google_maps_flutter: ^2.2.5
   http: ^0.13.4
   icons_plus: ^1.0.2
   image_picker: ^0.8.5+3
@@ -60,7 +64,6 @@ dependencies:
   lottie: ^2.2.0
   shared_preferences: ^2.0.16
   uuid: ^3.0.7
-  bottom_sheet: ^3.1.2
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -79,6 +82,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/
     - assets/images/
     - assets/images/svg/
   #   - images/a_dot_ham.jpeg

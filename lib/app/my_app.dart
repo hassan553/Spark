@@ -1,3 +1,4 @@
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,8 +7,11 @@ import 'package:rakna/features/setting/controller/setting_controller.dart';
 import '../core/localization/local.dart';
 import '../core/localization/local_controller.dart';
 import '../core/resources/app_colors.dart';
-import '../features/onboarding/views/splash_one.dart';
+import '../features/auth/presentation/forgetPassword/views/done_message.dart';
+import '../features/auth/presentation/login/views/login_view.dart';
 import 'package:get/get.dart';
+
+import '../features/onboarding/views/splash_one.dart';
 
 class Rakna extends StatelessWidget {
   const Rakna({super.key});
@@ -38,7 +42,30 @@ class Rakna extends StatelessWidget {
             ),
           ),
         ),
-        home: const SplashOneView(),
+        home:const  SplashOneView(),
+      ),
+    );
+  }
+}
+
+class sd extends StatelessWidget {
+  const sd({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return DottedBorder(
+      borderType: BorderType.Circle,
+      radius: Radius.circular(12),
+      padding: EdgeInsets.all(6),
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(12)),
+        child: Container(
+          padding: EdgeInsets.all(20),
+          margin: EdgeInsets.all(20),
+          height: 200,
+          width: 120,
+          color: Colors.amber,
+        ),
       ),
     );
   }
@@ -74,7 +101,7 @@ class _TState extends State<T> {
               Expanded(
                 child: RadioListTile(
                   value: false,
-                  groupValue:controller. groupValue,
+                  groupValue: controller.groupValue,
                   onChanged: (value) {
                     controller.changeToArabic(value!);
                   },

@@ -17,7 +17,7 @@ class HomeBody extends StatelessWidget {
     return BackgroundWidget(
       child: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 5, right: 5, top: 10),
+          padding: const EdgeInsetsDirectional.only(start: 5, end: 5, top: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../../../core/functions/globle_functions.dart';
 import '../../../../core/resources/app_colors.dart';
@@ -18,7 +19,7 @@ class WelcomeTextWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             CustomTextWidget(
-              text: 'select preferred space',
+              text: 'homeText1'.tr,
               fontSize: 18.sp,
               fontWeight: FontWeight.w600,
             ),

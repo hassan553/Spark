@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import '../../../core/functions/globle_functions.dart';
 import '../../widgets/custom_text.dart';
 
@@ -24,26 +25,18 @@ class NotificationView extends StatelessWidget {
                 ),
                 Center(
                   child: CustomTextWidget(
-                    text: 'Notifications',
-                    fontSize: 22.sp,
+                    text: 'homeText6'.tr,
+                    fontSize: 30.sp,
                   ),
                 ),
                 const SizedBox(
                   height: 30,
                 ),
-                CustomTextWidget(
-                  text: 'New',
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.bold,
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
                 ...List.generate(
-                  2,
+                  21,
                   (index) => Container(
                     width: screenSize(context).width,
-                    padding: const EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(15),
                     margin: const EdgeInsets.all(5),
                     decoration: BoxDecoration(
                       color: Colors.white30,
@@ -55,44 +48,14 @@ class NotificationView extends StatelessWidget {
                       border: Border.all(width: 2, color: Colors.yellow),
                     ),
                     child: Text(
-                      'P - 02 is the Second place to the right of the entrance and your place code is : 8894',
+                      'homeText7'.tr,
                       style: TextStyle(
-                          fontSize: 10.sp, fontWeight: FontWeight.bold),
+                          fontSize: 15.sp, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                CustomTextWidget(
-                  text: 'The oldest',
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.bold,
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                ...List.generate(
-                  10,
-                  (index) => Container(
-                    width: screenSize(context).width,
-                    margin: const EdgeInsets.only(bottom: 10),
-                    padding: const EdgeInsets.all(8),
-                    decoration: const BoxDecoration(
-                      color: Colors.white30,
-                      borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(20),
-                        bottomLeft: Radius.circular(20),
-                        topRight: Radius.circular(20),
-                      ),
-                    ),
-                    child: Text(
-                      'P - 02 is the Second place to the right of the entrance and your place code is : 8894',
-                      style: TextStyle(
-                          fontSize: 10.sp, fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
+              
+               
               ],
             ),
           ),

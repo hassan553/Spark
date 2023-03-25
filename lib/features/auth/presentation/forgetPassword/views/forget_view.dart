@@ -10,6 +10,7 @@ import '../../../../../core/resources/app_colors.dart';
 import '../../../../widgets/custom_text.dart';
 import '../../login/widgets/build-rich_text.dart';
 import 'otp_view.dart';
+import 'package:get/get.dart';
 
 class ForgetPasswordView extends StatelessWidget {
   const ForgetPasswordView({super.key});
@@ -17,7 +18,7 @@ class ForgetPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var passwordController = TextEditingController();
-    
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       extendBody: true,
@@ -46,7 +47,7 @@ class ForgetPasswordView extends StatelessWidget {
                 children: [
                   const BuildRichText(),
                   CustomTextWidget(
-                    text: 'Park your car ',
+                    text: 'homeText8'.tr,
                     fontSize: 13.sp,
                     fontWeight: FontWeight.bold,
                     color: Colors.black45,
@@ -55,7 +56,7 @@ class ForgetPasswordView extends StatelessWidget {
                     height: screenSize(context).height * .1,
                   ),
                   CustomTextWidget(
-                    text: 'Forget Password ',
+                    text: 'homeText9'.tr,
                     fontSize: 30.sp,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
@@ -71,7 +72,7 @@ class ForgetPasswordView extends StatelessWidget {
                       color: Colors.white30,
                     ),
                     child: Text(
-                      ' Enter your Email should we use to reset your password',
+                      'homeText10'.tr,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 14.sp,
@@ -85,9 +86,8 @@ class ForgetPasswordView extends StatelessWidget {
                     height: screenSize(context).height * .06,
                   ),
                   CustomTextFieldWidget(
-                    controller:
-                        passwordController,
-                    hintText: 'via E-mail',
+                    controller: passwordController,
+                    hintText: 'homeText11'.tr,
                     iconData: Icons.email_outlined,
                   ),
                   SizedBox(
@@ -105,7 +105,7 @@ class ForgetPasswordView extends StatelessWidget {
                         function: () {
                           navigateTo(context, const OTPView());
                         },
-                        text: 'Send code',
+                        text: 'homeText12'.tr,
                       ),
                       duration: const Duration(
                         seconds: 1,

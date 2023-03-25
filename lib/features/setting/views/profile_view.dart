@@ -32,11 +32,10 @@ class ProfileView extends StatelessWidget {
                       Stack(
                         alignment: AlignmentDirectional.bottomEnd,
                         children: [
-                          CircleAvatar(
-                            radius: 50,
-                            backgroundImage:
-                                NetworkImage(controller.userModel!.data!.image!),
-                          ),
+                          const CircleAvatar(
+                        radius: 30,
+                        backgroundImage: AssetImage('assets/images/preson.jpg'),
+                      ),
                           InkWell(
                             onTap: () {
                               controller.chooseImageFromCamera();

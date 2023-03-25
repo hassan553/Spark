@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:get/get.dart';
 
 import '../../../../core/functions/globle_functions.dart';
 import '../../../widgets/custom_button.dart';
@@ -17,7 +18,7 @@ class BookButton extends StatelessWidget {
         function: () {
           navigateTo(context, const CompleteParkingInfo());
         },
-        text: 'Book',
+        text: 'homeText3'.tr,
       ),
     );
   }

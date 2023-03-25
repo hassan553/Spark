@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 import '../../../widgets/custom_text.dart';
 
@@ -27,7 +28,7 @@ class RotatedText extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
             CustomTextWidget(
-              text: ' slots Free',
+              text: 'homeText5'.tr,
               fontSize: 18.sp,
               fontWeight: FontWeight.bold,
               color: Colors.black,

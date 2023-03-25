@@ -33,7 +33,7 @@
     "Confirm New Password":"تأكيد كلمة المرور الجديدة",
     "Confirm":"يتأكد",
     "The password has been reset successfully":"تم إعادة تعيين كلمة المرور بنجاح",
-    "My car":"سيارتك",
+    "My car":"سيارتي",
     "Enter your car Details":"أدخل تفاصيل سيارتك",
     "Car Number":"رقم سيارتك",
     "Enter your car number":"أدخل رقم سيارتك",

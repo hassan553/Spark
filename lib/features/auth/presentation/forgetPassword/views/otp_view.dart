@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'reset_password_view.dart';
 import '../../../../widgets/background_widget.dart';
 import '../../../../widgets/custom_button.dart';
@@ -26,7 +27,7 @@ class OTPView extends StatelessWidget {
                 children: [
                   const BuildRichText(),
                   CustomTextWidget(
-                    text: 'Park your car ',
+                    text: 'homeText8'.tr,
                     fontSize: 13.sp,
                     fontWeight: FontWeight.bold,
                     color: Colors.black45,
@@ -34,11 +35,13 @@ class OTPView extends StatelessWidget {
                   SizedBox(
                     height: screenSize(context).height * .1,
                   ),
-                  CustomTextWidget(
-                    text: 'Code Sent ! ',
-                    fontSize: 30.sp,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                  FittedBox(
+                    child: CustomTextWidget(
+                      text: 'homeText13'.tr,
+                      fontSize: 30.sp,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
                   ),
                   SizedBox(
                     height: 20.sp,
@@ -51,10 +54,10 @@ class OTPView extends StatelessWidget {
                       color: Colors.white30,
                     ),
                     child: Text(
-                      ' Code has been sent to Email',
+                      'homeText14'.tr,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 14.sp,
+                        fontSize: 16.sp,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
@@ -80,7 +83,7 @@ class OTPView extends StatelessWidget {
                         function: () {
                           navigateTo(context, const ResetPasswordView());
                         },
-                        text: 'Verify',
+                        text: 'homeText15'.tr,
                       ),
                       duration: const Duration(
                         seconds: 1,
@@ -93,14 +96,14 @@ class OTPView extends StatelessWidget {
                   Row(
                     children: [
                       CustomTextWidget(
-                        text: "Didn't receive it ?",
+                        text: "homeText16".tr,
                         fontWeight: FontWeight.w600,
                         fontSize: 15.sp,
                       ),
                       InkWell(
                         onTap: () {},
                         child: CustomTextWidget(
-                          text: " Resend ",
+                          text: "homeText17".tr,
                           fontSize: 18.sp,
                           fontWeight: FontWeight.bold,
                           color: Colors.yellow,

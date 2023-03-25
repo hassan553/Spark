@@ -16,7 +16,7 @@ class HomeController extends GetxController {
     update();
   }
 
-  List<Widget> screens = const [
+  List<Widget> screens =  [
     HomeBody(),
     NotificationView(),
     SettingView(),
