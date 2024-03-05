@@ -1,6 +1,5 @@
-![Artboard – 1](https://user-images.githubusercontent.com/74131893/232624537-ef00233c-0f6d-4b47-b500-4a6ed2bdcfae.png)
 ![Artboard – 2 (1)](https://user-images.githubusercontent.com/74131893/232624554-412a8c30-ea6e-4874-baee-5c6a5f66719a.png)
-![Artboard – 2 (2)](https://user-images.githubusercontent.com/74131893/232624559-feaa461b-fe11-4feb-bff5-0d5064d0f4e8.png)
+![Artboard – 1](https://user-images.githubusercontent.com/74131893/232624537-ef00233c-0f6d-4b47-b500-4a6ed2bdcfae.png)
 ![Artboard – 2](https://user-images.githubusercontent.com/74131893/232624572-94c720e2-3c65-4322-ba61-61c5ad98da40.png)
 ![Artboard – 3 (1)](https://user-images.githubusercontent.com/74131893/232624580-14a3ff92-1ef9-4111-9656-35bc0e86d06c.png)
 ![Artboard – 1](https://user-images.githubusercontent.com/74131893/232624851-5dcf5cfa-a87e-400e-a184-96d67456a083.png)
@@ -22,7 +21,7 @@
 ![Artboard – 11](https://user-images.githubusercontent.com/74131893/232625148-37b0bdb1-04b1-4850-a85a-50adb756690f.png)
 ![Artboard – 12](https://user-images.githubusercontent.com/74131893/232625211-c3d036a5-e1c4-45a3-8f7c-21ad0537eec0.png)
 ![Artboard – 13](https://user-images.githubusercontent.com/74131893/232625229-c3e631f2-ee96-48dd-8bbe-e53854667fb8.png)
-# rakna
+# Smart Parking System
 
 A new Flutter project.
 
